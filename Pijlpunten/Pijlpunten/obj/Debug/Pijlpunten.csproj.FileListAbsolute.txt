@@ -1,0 +1,13 @@
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\ApplicationIcon.png
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Background.png
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\DBpijlpunten.sdf
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Pijlpunten.dll
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Pijlpunten.pdb
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\AppManifest.xaml
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Pijlpunten.xap
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\App.g.i.cs
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\MainPage.g.i.cs
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.g.resources
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.pdb
+C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\XapCacheFile.xml

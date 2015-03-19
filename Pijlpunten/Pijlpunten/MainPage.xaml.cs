@@ -11,6 +11,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 
+//Own added library's
+using System.Windows.Navigation;
+
 namespace Pijlpunten
 {
     public partial class MainPage : PhoneApplicationPage
@@ -19,6 +22,17 @@ namespace Pijlpunten
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
+            {
+                //DBpijl.CreateDatabase();
+                //DBpijl.LogDebug = true;
+                Archer_Name.Text = DBpijl.Tbl_Archer.ToString();
+                Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
+            }
         }
     }
 }
