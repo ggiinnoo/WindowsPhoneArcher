@@ -30,6 +30,10 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock x:Name="Archer_Name" Text="name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
             <TextBlock x:Name="Archer_Guild" Text="guild" Margin="12,75,-3,-82" Style="{StaticResource PhoneTextTitle1Style}"/>
+
+            <Toolkit:ListPicker x:Name="UserSelection">
+             
+            </Toolkit:ListPicker>
         </Grid>        
     </Grid>
  

@@ -28,8 +28,8 @@ namespace Pijlpunten
         {
             using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
             {
-                //DBpijl.CreateDatabase();
-                //DBpijl.LogDebug = true;
+                DBpijl.CreateIfNotExists();
+                DBpijl.LogDebug = true;
                 Archer_Name.Text = DBpijl.Tbl_Archer.ToString();
                 Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
             }
