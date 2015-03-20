@@ -30,8 +30,8 @@ namespace Pijlpunten
             {
                 DBpijl.CreateIfNotExists();
                 DBpijl.LogDebug = true;
-                Archer_Name.Text = DBpijl.Tbl_Archer.ToString();
-                Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
+                UserSelection.ItemsSource = DBpijl.Tbl_Archer.ToList();
+                //Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
             }
         }
     }
