@@ -37,7 +37,7 @@ namespace Pijlpunten
 
         private void btnPinvoer_Click(object sender, RoutedEventArgs e)
         {
-            //NavigationService.Navigate(new Uri("/PuntenIvoeren.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Pages/PuntenIvoeren.xaml", UriKind.Relative));
         }
     }
 }
