@@ -11,8 +11,6 @@ C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\
 C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll
 C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.pdb
 C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\XapCacheFile.xml
-C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.csprojResolveAssemblyReference.cache
-C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\App.g.i.cs
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\ApplicationIcon.png
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Background.png
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\DBpijlpunten.sdf
@@ -45,8 +43,9 @@ C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\De
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
-C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\MainPage.g.i.cs
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.g.resources
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.pdb
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\XapCacheFile.xml
+C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\App.g.i.cs
+C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\MainPage.g.i.cs

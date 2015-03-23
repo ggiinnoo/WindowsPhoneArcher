@@ -24,17 +24,18 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="Pijlpunten" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Menu" Margin="9,-7,0,0"  Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock x:Name="Archer_Name" Text="name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <TextBlock x:Name="Archer_Guild" Text="guild" Margin="12,75,-3,-82" Style="{StaticResource PhoneTextTitle1Style}"/>
-
-            <toolkit:ListPicker x:Name="UserSelection">
+            <toolkit:ListPicker x:Name="UserSelection" Margin="6,6,9,618">
 
             </toolkit:ListPicker>
+            <Button Content="Punten Invoer" Height="120" HorizontalAlignment="Center" Margin="12,96,0,0" Name="btnPinvoer" VerticalAlignment="Top" Width="424" Click="btnPinvoer_Click" />
+            <Button Content="Scores Bekijken" Height="120" HorizontalAlignment="Center" Margin="12,222,0,0" Name="btnScore" VerticalAlignment="Top" Width="424" />
+            <Button Content="Opties" Height="120" HorizontalAlignment="Center" Margin="12,348,0,0" Name="btnOpties" VerticalAlignment="Top" Width="424" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="32,597,0,0" Name="tbName" Text="Schutter:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,633,0,0" Name="tbGuild" Text="Vereniging:" VerticalAlignment="Top" />
         </Grid>        
     </Grid>
  

@@ -34,5 +34,10 @@ namespace Pijlpunten
                 //Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
             }
         }
+
+        private void btnPinvoer_Click(object sender, RoutedEventArgs e)
+        {
+            //NavigationService.Navigate(new Uri("/PuntenIvoeren.xaml", UriKind.Relative));
+        }
     }
 }
