@@ -35,9 +35,21 @@ namespace Pijlpunten
             }
         }
 
+        //Go to Add score view screen
         private void btnPinvoer_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Pages/PuntenIvoeren.xaml", UriKind.Relative));
+        }
+
+        //Go to score view screen
+        private void btnScore_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Pages/ScoreBekijken.xaml", UriKind.Relative));
+        }
+
+        private void btnOpties_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Not availeble in this version");
         }
     }
 }

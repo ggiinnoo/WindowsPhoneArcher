@@ -19,5 +19,11 @@ namespace Pijlpunten.Pages
         {
             InitializeComponent();
         }
+
+        //Go back to main menu
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

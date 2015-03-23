@@ -12,7 +12,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -32,8 +32,8 @@
 
             </toolkit:ListPicker>
             <Button Content="Punten Invoer" Height="120" HorizontalAlignment="Center" Margin="12,96,0,0" Name="btnPinvoer" VerticalAlignment="Top" Width="424" Click="btnPinvoer_Click" />
-            <Button Content="Scores Bekijken" Height="120" HorizontalAlignment="Center" Margin="12,222,0,0" Name="btnScore" VerticalAlignment="Top" Width="424" />
-            <Button Content="Opties" Height="120" HorizontalAlignment="Center" Margin="12,348,0,0" Name="btnOpties" VerticalAlignment="Top" Width="424" />
+            <Button Content="Scores Bekijken" Height="120" HorizontalAlignment="Center" Margin="12,222,0,0" Name="btnScore" VerticalAlignment="Top" Width="424" Click="btnScore_Click" />
+            <Button Content="Opties" Height="120" HorizontalAlignment="Center" Margin="12,348,0,0" Name="btnOpties" VerticalAlignment="Top" Width="424" Click="btnOpties_Click" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="32,597,0,0" Name="tbName" Text="Schutter:" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,633,0,0" Name="tbGuild" Text="Vereniging:" VerticalAlignment="Top" />
         </Grid>        
