@@ -26,12 +26,18 @@ namespace Pijlpunten
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
+           using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
             {
                 DBpijl.CreateIfNotExists();
                 DBpijl.LogDebug = true;
                 UserSelection.ItemsSource = DBpijl.Tbl_Archer.ToList();
-                //Archer_Guild.Text = DBpijl.Tbl_Archer.ToString();
+
+                List<DBpijlpuntenContext> Archers = new List<DBpijlpuntenContext>();
+                var getArcher = from DBpijlpunten in DBpijl.Tbl_Archer select Archer_Name;
+                foreach (var DBpijlpunten in getArcher)
+                {
+                    Archers.Add();
+                }
             }
         }
 
@@ -47,6 +53,7 @@ namespace Pijlpunten
             NavigationService.Navigate(new Uri("/Pages/ScoreBekijken.xaml", UriKind.Relative));
         }
 
+        //The options button
         private void btnOpties_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Not availeble in this version");
