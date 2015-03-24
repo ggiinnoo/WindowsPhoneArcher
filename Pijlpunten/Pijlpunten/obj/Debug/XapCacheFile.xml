@@ -1,14 +1,14 @@
-﻿<xapCache source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Pijlpunten.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="24-3-2015 16:15:42">
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="20-3-2015 9:17:38" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Background.png" archivePath="Background.png" lastWriteTime="19-3-2015 10:45:01" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-3-2015 10:45:01" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll" archivePath="Pijlpunten.dll" lastWriteTime="24-3-2015 16:15:41" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="20-3-2015 9:17:38" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="6-7-2012 1:40:16" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="20-3-2015 9:17:38" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="19-3-2015 10:45:01" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="23-3-2015 14:15:42" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\DBpijlpunten.sdf" archivePath="DBpijlpunten.sdf" lastWriteTime="20-3-2015 12:39:09" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-3-2015 10:45:01" />
-  <file source="C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="19-3-2015 10:45:01" />
+﻿<xapCache source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Pijlpunten.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="24-3-2015 18:47:34">
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="19-3-2015 16:13:30" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Background.png" archivePath="Background.png" lastWriteTime="19-3-2015 15:21:55" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-3-2015 15:21:55" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll" archivePath="Pijlpunten.dll" lastWriteTime="24-3-2015 18:47:34" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\packages\WPtoolkit.4.2013.08.16\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="19-3-2015 23:25:12" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="19-3-2012 16:29:06" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="19-3-2015 23:25:12" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="19-3-2015 15:21:55" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="24-3-2015 14:42:40" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\DBpijlpunten.sdf" archivePath="DBpijlpunten.sdf" lastWriteTime="20-3-2015 15:39:03" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="19-3-2015 15:21:55" />
+  <file source="C:\Users\ggiinnoo\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\Background.png" archivePath="Background.png" lastWriteTime="19-3-2015 15:21:55" />
 </xapCache>

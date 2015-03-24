@@ -15,12 +15,18 @@ namespace Pijlpunten.Pages
 {
     public partial class PuntenIvoeren : PhoneApplicationPage
     {
+        string currentDate;
+
         public PuntenIvoeren()
         {
             InitializeComponent();
-            TbDatum.Text = DateTime.UtcNow.Date.ToString("dd-MM-yyyy");
+
+            //Set date to string and to screen
+            currentDate = DateTime.UtcNow.Date.ToString("dd-MM-yyyy");
+            TbDatum.Text = currentDate;
         }
 
+        //Go back to menu
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
