@@ -29,6 +29,15 @@
             <Button Content="√" Height="69" HorizontalAlignment="Left" Margin="382,0,0,0" Name="btnCommit" VerticalAlignment="Top" Width="74" />
             <Button Content="&lt;" Height="69" HorizontalAlignment="Left" Name="btnBack" VerticalAlignment="Top" Width="74" Click="btnBack_Click" />
             <TextBlock Height="33" HorizontalAlignment="Left" Margin="145,24,0,0" Name="textBlock1" Text="Punten Invoeren" VerticalAlignment="Top" Width="180" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="25,88,0,0" Name="textBlock2" Text="Score:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="25,124,0,0" Name="textBlock3" Text="Aantal pijlen:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="25,160,0,0" Name="textBlock4" Text="Datum:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="329,88,0,0" Name="textBlock5" Text="Pijl 1:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="329,124,0,0" Name="textBlock6" Text="Pijl 2:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="329,160,0,0" Name="textBlock7" Text="Pijl 3:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,88,0,0" Name="TbScore" Text="" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,124,0,0" Name="TbArrowCount" Text="" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,160,0,0" Name="TbDatum" Text="" VerticalAlignment="Top" />
         </Grid>
     </Grid>
 

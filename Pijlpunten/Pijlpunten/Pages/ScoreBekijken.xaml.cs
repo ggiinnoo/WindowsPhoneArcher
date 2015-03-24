@@ -18,6 +18,10 @@ namespace Pijlpunten.Pages
         public ScoreBekijken()
         {
             InitializeComponent();
+            lbpunt1.Items.Add("2");
+            lbpunt1.Items.Add("3");
+            lbpunt1.Items.Add("9");
+            lbpunt1.Items.Add("8");
         }
 
         //Go back to main menu

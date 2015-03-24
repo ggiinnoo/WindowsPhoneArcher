@@ -18,6 +18,7 @@ namespace Pijlpunten.Pages
         public PuntenIvoeren()
         {
             InitializeComponent();
+            TbDatum.Text = DateTime.UtcNow.Date.ToString("dd-MM-yyyy");
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
