@@ -24,7 +24,7 @@
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"></StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Margin="12,17,12,12" Grid.RowSpan="2">
+        <Grid x:Name="ContentPanel" Margin="12,17,12,12" Grid.RowSpan="2" Opacity="1">
             <Image Height="458" HorizontalAlignment="Left" Margin="0,259,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="450" Source="/Pijlpunten;component/Images/blazoen.jpg" />
             <Button Content="√" Height="69" HorizontalAlignment="Left" Margin="382,0,0,0" Name="btnCommit" VerticalAlignment="Top" Width="74" />
             <Button Content="&lt;" Height="69" HorizontalAlignment="Left" Name="btnBack" VerticalAlignment="Top" Width="74" Click="btnBack_Click" />
@@ -45,6 +45,16 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="374,88,0,0" Name="TbArrow1" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="373,160,0,0" Name="TbArrow2" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="374,124,0,0" Name="TbArrow3" Text="" VerticalAlignment="Top" />
+            <Ellipse Height="447" HorizontalAlignment="Left" Margin="0,259,0,0" Name="E1" Stroke="Black" StrokeThickness="28" VerticalAlignment="Top" Width="439" Tap="E1_Tap" Opacity="0" />
+            <Ellipse Height="394" HorizontalAlignment="Left" Margin="25,287,0,0" Name="E2" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="389" Opacity="0" Tap="E2_Tap" />
+            <Ellipse Height="342" HorizontalAlignment="Left" Margin="52,314,0,0" Name="E3" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="337" Opacity="0" Tap="E3_Tap" />
+            <Ellipse Height="297" HorizontalAlignment="Left" Margin="76,337,0,0" Name="E4" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="290" Tap="E4_Tap" Opacity="0" />
+            <Ellipse Height="246" HorizontalAlignment="Left" Margin="100,362,0,0" Name="E5" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="242" Opacity="0" Tap="E5_Tap" />
+            <Ellipse Height="196" HorizontalAlignment="Left" Margin="125,388,0,0" Name="E6" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="192" Opacity="0" Tap="E6_Tap" />
+            <Ellipse Height="148" HorizontalAlignment="Left" Margin="145,410,0,0" Name="E7" Stroke="Black" StrokeThickness="22" VerticalAlignment="Top" Width="151" Opacity="0" Tap="E7_Tap" />
+            <Ellipse Height="108" HorizontalAlignment="Left" Margin="167,431,0,0" Name="E8" Stroke="Black" StrokeThickness="22" VerticalAlignment="Top" Width="106" Opacity="0" Tap="E8_Tap" />
+            <Ellipse Height="70" Margin="186,450,201,0" Name="E9" Stroke="Black" StrokeThickness="22" VerticalAlignment="Top" Opacity="0" Tap="E9_Tap" />
+            <Ellipse Height="30" HorizontalAlignment="Left" Margin="204,470,0,0" Name="E10" Stroke="Black" StrokeThickness="22" VerticalAlignment="Top" Width="30" Opacity="0" Tap="E10_Tap" />
         </Grid>
     </Grid>
 

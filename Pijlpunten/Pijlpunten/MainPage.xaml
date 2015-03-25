@@ -32,7 +32,7 @@
             <toolkit:ListPicker x:Name="UserSelection" Margin="8,6,7,618">
                 <toolkit:ListPicker.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Archer_Name}"/>
+                        <!--<TextBlock Text="{Archer_Name}"/>-->
                     </DataTemplate>
                 </toolkit:ListPicker.ItemTemplate>
             </toolkit:ListPicker>

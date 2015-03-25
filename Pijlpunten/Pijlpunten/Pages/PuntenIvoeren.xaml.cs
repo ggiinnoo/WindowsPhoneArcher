@@ -31,5 +31,55 @@ namespace Pijlpunten.Pages
         {
             NavigationService.GoBack();
         }
+
+        private void E1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("1");
+        }
+
+        private void E2_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("2");
+        }
+
+        private void E3_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("3");
+        }
+
+        private void E4_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("4");
+        }
+
+        private void E5_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("5");
+        }
+
+        private void E6_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("6");
+        }
+
+        private void E7_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("7");
+        }
+
+        private void E8_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("8");
+        }
+
+        private void E9_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("9");
+        }
+
+        private void E10_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            MessageBox.Show("10");
+        }
     }
 }

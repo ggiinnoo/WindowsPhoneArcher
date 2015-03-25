@@ -32,12 +32,12 @@ namespace Pijlpunten
                 DBpijl.LogDebug = true;
                 UserSelection.ItemsSource = DBpijl.Tbl_Archer.ToList();
 
-                List<DBpijlpuntenContext> Archers = new List<DBpijlpuntenContext>();
-                var getArcher = from DBpijlpunten in DBpijl.Tbl_Archer select Archer_Name;
-                foreach (var DBpijlpunten in getArcher)
-                {
-                    Archers.Add();
-                }
+                //List<DBpijlpuntenContext> Archers = new List<DBpijlpuntenContext>();
+                //var getArcher = from DBpijlpunten in DBpijl.Tbl_Archer select Archer_Name;
+                //foreach (var DBpijlpunten in getArcher)
+                //{
+                //    Archers.Add();
+                //}
             }
         }
 
