@@ -24,10 +24,21 @@ namespace Pijlpunten
 {
     public class DatabaseOperations : PhoneApplicationPage
     {
-
         DBpijlpuntenContext DBCon = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString);
 
         //Get archers from database
-        
+        public void GetArcher(List<archers>)
+        {
+            using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
+            {
+                DBpijl.CreateIfNotExists();
+                DBpijl.LogDebug = true;
+
+                foreach (var item in DBpijl.Tbl_Archer)
+                {
+                    UserSelection.Items.Add(item.Archer_Name);
+                }
+            }
+        }
     }
 }

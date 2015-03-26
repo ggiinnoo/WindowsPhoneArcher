@@ -38,6 +38,7 @@
             <Button Content="Opties" Height="120" HorizontalAlignment="Center" Margin="12,348,0,0" Name="btnOpties" VerticalAlignment="Top" Width="424" Click="btnOpties_Click" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="32,597,0,0" Name="tbName" Text="Schutter:" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,633,0,0" Name="tbGuild" Text="Vereniging:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="117,597,0,0" Name="tbSelectedUser" Text="Selected User" VerticalAlignment="Top" />
         </Grid>        
     </Grid>
  

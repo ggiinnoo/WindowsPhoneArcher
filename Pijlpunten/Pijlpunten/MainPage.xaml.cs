@@ -37,7 +37,8 @@ namespace Pijlpunten
                 }
             }
 
-            selectedUser = UserSelection.GetValue();
+            selectedUser = UserSelection.SelectedItem.ToString();
+            tbSelectedUser.Text = selectedUser.ToString();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
