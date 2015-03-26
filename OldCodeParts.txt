@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -18,7 +18,7 @@ namespace Pijlpunten
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        DatabaseOperations DBo = new DatabaseOperations();
+        DatabaseOperations DB0 = new DatabaseOperations();
         public string selectedUser;
 
         // Constructor
@@ -26,7 +26,16 @@ namespace Pijlpunten
         {
             InitializeComponent();
 
-            DBo.GetArcher();
+            using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
+            {
+                DBpijl.CreateIfNotExists();
+                DBpijl.LogDebug = true;
+
+                foreach (var item in DBpijl.Tbl_Archer)
+                {
+                    UserSelection.Items.Add(item.Archer_Name);
+                }
+            }
 
             selectedUser = UserSelection.SelectedItem.ToString();
             tbSelectedUser.Text = selectedUser.ToString();
