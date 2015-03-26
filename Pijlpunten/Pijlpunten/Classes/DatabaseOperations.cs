@@ -11,30 +11,23 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.Windows.Navigation;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.IsolatedStorage;
+using Microsoft.Phone.Data.Linq.Mapping;
+using Microsoft.Phone.Data.Linq;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
-namespace Pijlpunten.Classes
+namespace Pijlpunten
 {
     public class DatabaseOperations : PhoneApplicationPage
     {
 
         DBpijlpuntenContext DBCon = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString);
-        //public void getarchers()
-        //{
-        //    list<string> archers = new list<string>();
-        //    try
-        //    {
-        //        var tmp = from s in DBCon.tbl_archer
-        //                  select s;
-        //        foreach (tbl_archer item in tmp)
-        //        {
-        //            archers.add(item);
-        //        }
 
-        //    }
-        //    catch
-        //    {
-        //    }
-        //}
+        //Get archers from database
         
     }
 }

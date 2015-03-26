@@ -18,27 +18,36 @@ namespace Pijlpunten
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        DatabaseOperations DB0 = new DatabaseOperations();
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            //UserSelection.ItemsSource = DB0.
+
+            using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
+            {
+                DBpijl.CreateIfNotExists();
+                DBpijl.LogDebug = true;
+
+                List<string> NameArcher = new List<string>();
+                NameArcher.Add(DBpijl.Tbl_Archer.ToString());
+
+                foreach (var item in DBpijl.Tbl_Archer)
+                {
+                    UserSelection.Items.Add(item.Archer_Name);
+                }
+
+                
+
+                
+                
+            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-           using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
-            {
-                DBpijl.CreateIfNotExists();
-                DBpijl.LogDebug = true;
-                UserSelection.ItemsSource = DBpijl.Tbl_Archer.ToList();
-
-                //List<DBpijlpuntenContext> Archers = new List<DBpijlpuntenContext>();
-                //var getArcher = from DBpijlpunten in DBpijl.Tbl_Archer select Archer_Name;
-                //foreach (var DBpijlpunten in getArcher)
-                //{
-                //    Archers.Add();
-                //}
-            }
+           
         }
 
         //Go to Add score view screen
