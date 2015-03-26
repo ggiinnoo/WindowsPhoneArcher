@@ -29,7 +29,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <!-- list picker for users -->
-            <toolkit:ListPicker x:Name="UserSelection" Margin="8,6,7,618">
+            <toolkit:ListPicker x:Name="UserSelection" Margin="8,6,7,618" FontSize="30">
                 
             </toolkit:ListPicker>
             

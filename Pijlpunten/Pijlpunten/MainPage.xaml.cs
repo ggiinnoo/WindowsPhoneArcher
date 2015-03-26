@@ -19,30 +19,25 @@ namespace Pijlpunten
     public partial class MainPage : PhoneApplicationPage
     {
         DatabaseOperations DB0 = new DatabaseOperations();
+        public string selectedUser;
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-            //UserSelection.ItemsSource = DB0.
 
             using (DBpijlpuntenContext DBpijl = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString))
             {
                 DBpijl.CreateIfNotExists();
                 DBpijl.LogDebug = true;
 
-                List<string> NameArcher = new List<string>();
-                NameArcher.Add(DBpijl.Tbl_Archer.ToString());
-
                 foreach (var item in DBpijl.Tbl_Archer)
                 {
                     UserSelection.Items.Add(item.Archer_Name);
                 }
-
-                
-
-                
-                
             }
+
+            selectedUser = UserSelection.GetValue();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
