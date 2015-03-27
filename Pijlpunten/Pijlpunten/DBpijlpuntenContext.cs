@@ -20,6 +20,7 @@ namespace Pijlpunten
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
+
 	
 	
 using System.IO;
@@ -171,6 +172,12 @@ public class DebugWriter : TextWriter
     partial void InsertTbl_Archer(Tbl_Archer instance);
     partial void UpdateTbl_Archer(Tbl_Archer instance);
     partial void DeleteTbl_Archer(Tbl_Archer instance);
+    partial void InsertTbl_Arrow(Tbl_Arrow instance);
+    partial void UpdateTbl_Arrow(Tbl_Arrow instance);
+    partial void DeleteTbl_Arrow(Tbl_Arrow instance);
+    partial void InsertTbl_Score(Tbl_Score instance);
+    partial void UpdateTbl_Score(Tbl_Score instance);
+    partial void DeleteTbl_Score(Tbl_Score instance);
     #endregion
 		
 		public System.Data.Linq.Table<Tbl_Archer> Tbl_Archer
@@ -178,6 +185,22 @@ public class DebugWriter : TextWriter
 			get
 			{
 				return this.GetTable<Tbl_Archer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_Arrow> Tbl_Arrow
+		{
+			get
+			{
+				return this.GetTable<Tbl_Arrow>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_Score> Tbl_Score
+		{
+			get
+			{
+				return this.GetTable<Tbl_Score>();
 			}
 		}
 	}
@@ -196,6 +219,8 @@ public class DebugWriter : TextWriter
 		
 		private double _Archer_Avarage;
 		
+		private EntitySet<Tbl_Score> _Tbl_Score;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -212,6 +237,7 @@ public class DebugWriter : TextWriter
 		
 		public Tbl_Archer()
 		{
+			this._Tbl_Score = new EntitySet<Tbl_Score>(new Action<Tbl_Score>(this.attach_Tbl_Score), new Action<Tbl_Score>(this.detach_Tbl_Score));
 			OnCreated();
 		}
 		
@@ -295,6 +321,19 @@ public class DebugWriter : TextWriter
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Archer_ID", Storage="_Tbl_Score", ThisKey="Archer_Id", OtherKey="Archer_ID", DeleteRule="NO ACTION")]
+		public EntitySet<Tbl_Score> Tbl_Score
+		{
+			get
+			{
+				return this._Tbl_Score;
+			}
+			set
+			{
+				this._Tbl_Score.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -313,6 +352,444 @@ public class DebugWriter : TextWriter
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Tbl_Score(Tbl_Score entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Archer = this;
+		}
+		
+		private void detach_Tbl_Score(Tbl_Score entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Archer = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="tbl_Arrow")]
+	public partial class Tbl_Arrow : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Arrow_ID;
+		
+		private int _Score_ID;
+		
+		private string _Arrow_Location;
+		
+		private int _Arrow_Point1;
+		
+		private int _Arrow_Point2;
+		
+		private int _Arrow_Point3;
+		
+		private EntityRef<Tbl_Score> _Tbl_Score;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnArrow_IDChanging(int value);
+    partial void OnArrow_IDChanged();
+    partial void OnScore_IDChanging(int value);
+    partial void OnScore_IDChanged();
+    partial void OnArrow_LocationChanging(string value);
+    partial void OnArrow_LocationChanged();
+    partial void OnArrow_Point1Changing(int value);
+    partial void OnArrow_Point1Changed();
+    partial void OnArrow_Point2Changing(int value);
+    partial void OnArrow_Point2Changed();
+    partial void OnArrow_Point3Changing(int value);
+    partial void OnArrow_Point3Changed();
+    #endregion
+		
+		public Tbl_Arrow()
+		{
+			this._Tbl_Score = default(EntityRef<Tbl_Score>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arrow_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Arrow_ID
+		{
+			get
+			{
+				return this._Arrow_ID;
+			}
+			set
+			{
+				if ((this._Arrow_ID != value))
+				{
+					this.OnArrow_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Arrow_ID = value;
+					this.SendPropertyChanged("Arrow_ID");
+					this.OnArrow_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Score_ID", DbType="Int NOT NULL")]
+		public int Score_ID
+		{
+			get
+			{
+				return this._Score_ID;
+			}
+			set
+			{
+				if ((this._Score_ID != value))
+				{
+					if (this._Tbl_Score.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnScore_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Score_ID = value;
+					this.SendPropertyChanged("Score_ID");
+					this.OnScore_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arrow_Location", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Arrow_Location
+		{
+			get
+			{
+				return this._Arrow_Location;
+			}
+			set
+			{
+				if ((this._Arrow_Location != value))
+				{
+					this.OnArrow_LocationChanging(value);
+					this.SendPropertyChanging();
+					this._Arrow_Location = value;
+					this.SendPropertyChanged("Arrow_Location");
+					this.OnArrow_LocationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arrow_Point1", DbType="Int NOT NULL")]
+		public int Arrow_Point1
+		{
+			get
+			{
+				return this._Arrow_Point1;
+			}
+			set
+			{
+				if ((this._Arrow_Point1 != value))
+				{
+					this.OnArrow_Point1Changing(value);
+					this.SendPropertyChanging();
+					this._Arrow_Point1 = value;
+					this.SendPropertyChanged("Arrow_Point1");
+					this.OnArrow_Point1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arrow_Point2", DbType="Int NOT NULL")]
+		public int Arrow_Point2
+		{
+			get
+			{
+				return this._Arrow_Point2;
+			}
+			set
+			{
+				if ((this._Arrow_Point2 != value))
+				{
+					this.OnArrow_Point2Changing(value);
+					this.SendPropertyChanging();
+					this._Arrow_Point2 = value;
+					this.SendPropertyChanged("Arrow_Point2");
+					this.OnArrow_Point2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Arrow_Point3", DbType="Int NOT NULL")]
+		public int Arrow_Point3
+		{
+			get
+			{
+				return this._Arrow_Point3;
+			}
+			set
+			{
+				if ((this._Arrow_Point3 != value))
+				{
+					this.OnArrow_Point3Changing(value);
+					this.SendPropertyChanging();
+					this._Arrow_Point3 = value;
+					this.SendPropertyChanged("Arrow_Point3");
+					this.OnArrow_Point3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Score_ID", Storage="_Tbl_Score", ThisKey="Score_ID", OtherKey="Score_ID", IsForeignKey=true)]
+		public Tbl_Score Tbl_Score
+		{
+			get
+			{
+				return this._Tbl_Score.Entity;
+			}
+			set
+			{
+				Tbl_Score previousValue = this._Tbl_Score.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_Score.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_Score.Entity = null;
+						previousValue.Tbl_Arrow.Remove(this);
+					}
+					this._Tbl_Score.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_Arrow.Add(this);
+						this._Score_ID = value.Score_ID;
+					}
+					else
+					{
+						this._Score_ID = default(int);
+					}
+					this.SendPropertyChanged("Tbl_Score");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="tbl_Score")]
+	public partial class Tbl_Score : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Score_ID;
+		
+		private int _Archer_ID;
+		
+		private System.Nullable<int> _Score_Totaal;
+		
+		private System.Nullable<int> _Score;
+		
+		private EntityRef<Tbl_Archer> _Tbl_Archer;
+		
+		private EntitySet<Tbl_Arrow> _Tbl_Arrow;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnScore_IDChanging(int value);
+    partial void OnScore_IDChanged();
+    partial void OnArcher_IDChanging(int value);
+    partial void OnArcher_IDChanged();
+    partial void OnScore_TotaalChanging(System.Nullable<int> value);
+    partial void OnScore_TotaalChanged();
+    partial void OnScoreChanging(System.Nullable<int> value);
+    partial void OnScoreChanged();
+    #endregion
+		
+		public Tbl_Score()
+		{
+			this._Tbl_Archer = default(EntityRef<Tbl_Archer>);
+			this._Tbl_Arrow = new EntitySet<Tbl_Arrow>(new Action<Tbl_Arrow>(this.attach_Tbl_Arrow), new Action<Tbl_Arrow>(this.detach_Tbl_Arrow));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Score_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Score_ID
+		{
+			get
+			{
+				return this._Score_ID;
+			}
+			set
+			{
+				if ((this._Score_ID != value))
+				{
+					this.OnScore_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Score_ID = value;
+					this.SendPropertyChanged("Score_ID");
+					this.OnScore_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Archer_ID", DbType="Int NOT NULL")]
+		public int Archer_ID
+		{
+			get
+			{
+				return this._Archer_ID;
+			}
+			set
+			{
+				if ((this._Archer_ID != value))
+				{
+					if (this._Tbl_Archer.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnArcher_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Archer_ID = value;
+					this.SendPropertyChanged("Archer_ID");
+					this.OnArcher_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Score_Totaal", DbType="Int")]
+		public System.Nullable<int> Score_Totaal
+		{
+			get
+			{
+				return this._Score_Totaal;
+			}
+			set
+			{
+				if ((this._Score_Totaal != value))
+				{
+					this.OnScore_TotaalChanging(value);
+					this.SendPropertyChanging();
+					this._Score_Totaal = value;
+					this.SendPropertyChanged("Score_Totaal");
+					this.OnScore_TotaalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Score", DbType="Int")]
+		public System.Nullable<int> Score
+		{
+			get
+			{
+				return this._Score;
+			}
+			set
+			{
+				if ((this._Score != value))
+				{
+					this.OnScoreChanging(value);
+					this.SendPropertyChanging();
+					this._Score = value;
+					this.SendPropertyChanged("Score");
+					this.OnScoreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Archer_ID", Storage="_Tbl_Archer", ThisKey="Archer_ID", OtherKey="Archer_Id", IsForeignKey=true)]
+		public Tbl_Archer Tbl_Archer
+		{
+			get
+			{
+				return this._Tbl_Archer.Entity;
+			}
+			set
+			{
+				Tbl_Archer previousValue = this._Tbl_Archer.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_Archer.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_Archer.Entity = null;
+						previousValue.Tbl_Score.Remove(this);
+					}
+					this._Tbl_Archer.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_Score.Add(this);
+						this._Archer_ID = value.Archer_Id;
+					}
+					else
+					{
+						this._Archer_ID = default(int);
+					}
+					this.SendPropertyChanged("Tbl_Archer");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Score_ID", Storage="_Tbl_Arrow", ThisKey="Score_ID", OtherKey="Score_ID", DeleteRule="NO ACTION")]
+		public EntitySet<Tbl_Arrow> Tbl_Arrow
+		{
+			get
+			{
+				return this._Tbl_Arrow;
+			}
+			set
+			{
+				this._Tbl_Arrow.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Tbl_Arrow(Tbl_Arrow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Score = this;
+		}
+		
+		private void detach_Tbl_Arrow(Tbl_Arrow entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Score = null;
 		}
 	}
 }

@@ -30,7 +30,7 @@ namespace Pijlpunten
         public List<Tbl_Archer> GetArcher()
         {
             List<Tbl_Archer> Archer_table = new List<Tbl_Archer>();
-            if (DBCon.CreateIfNotExists() == true)
+            if (DBCon.CreateIfNotExists() == false)
             {
                 MessageBox.Show("There is no database, it has now been created.");
                 DBCon.CreateIfNotExists();
