@@ -25,19 +25,20 @@ namespace Pijlpunten
     public class DatabaseOperations : PhoneApplicationPage
     {
         DBpijlpuntenContext DBCon = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString);
-        
 
         //Get archers from database
         public List<Tbl_Archer> GetArcher()
         {
             List<Tbl_Archer> Archer_table = new List<Tbl_Archer>();
-            DBCon.CreateIfNotExists();
+            if (DBCon.CreateIfNotExists() == true)
+            {
+                MessageBox.Show("There is no database, it has now been created.");
+                DBCon.CreateIfNotExists();
+            }
             DBCon.LogDebug = true;
 
-            foreach (var item in DBCon.Tbl_Archer)
-                {
-                    Archer_table.Add(item);
-                }
+            var tmp = from s in DBCon.Tbl_Archer select s;
+            Archer_table = tmp.ToList();
 
             return Archer_table;
         }

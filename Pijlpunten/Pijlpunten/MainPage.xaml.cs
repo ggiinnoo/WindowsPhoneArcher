@@ -26,10 +26,15 @@ namespace Pijlpunten
         {
             InitializeComponent();
 
-            DBo.GetArcher();
+            //DBo.GetArcher();
+            var temp = DBo.GetArcher();
 
-            selectedUser = UserSelection.SelectedItem.ToString();
-            tbSelectedUser.Text = selectedUser.ToString();
+            foreach (Tbl_Archer item in temp)
+            {
+                UserSelection.Items.Add(item.Archer_Name);
+            }
+            UserSelection.SelectionChanged +=new SelectionChangedEventHandler(UserSelection_SelectionChanged);
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -53,6 +58,12 @@ namespace Pijlpunten
         private void btnOpties_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Not availeble in this version");
+        }
+
+        private void UserSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedUser = UserSelection.SelectedItem.ToString();
+            tbSelectedUser.Text = selectedUser.ToString();
         }
     }
 }
