@@ -28,8 +28,10 @@
             <Button Content="&lt;" Height="69" HorizontalAlignment="Left" Name="btnBack" VerticalAlignment="Top" Width="74" Margin="6,6,0,0" Click="btnBack_Click" />
         </Grid>
         <Grid Height="675" HorizontalAlignment="Left" Margin="18,81,0,0" Name="grid1" VerticalAlignment="Top" Width="450" Grid.Row="1">
-            <ListBox Height="663" HorizontalAlignment="Left" Margin="-6,6,0,0" Name="lbDate" VerticalAlignment="Top" Width="135" FontSize="20"/>
-            <ListBox FontSize="20" Height="663" HorizontalAlignment="Left" Margin="135,6,0,0" Name="lbScore" VerticalAlignment="Top" Width="135" />
+            <ListBox Height="641" HorizontalAlignment="Left" Margin="-6,28,0,0" Name="lbDate" VerticalAlignment="Top" Width="135" FontSize="20"/>
+            <ListBox FontSize="20" Height="641" HorizontalAlignment="Left" Margin="135,28,0,0" Name="lbScore" VerticalAlignment="Top" Width="135" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="6,0,0,0" Name="textBlock2" Text="Datum" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,0,266,0" Name="textBlock3" Text="Score" VerticalAlignment="Top" />
         </Grid>
     </Grid>
  
