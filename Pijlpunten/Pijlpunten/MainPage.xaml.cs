@@ -32,6 +32,7 @@ namespace Pijlpunten
             foreach (Tbl_Archer item in temp)
             {
                 UserSelection.Items.Add(item.Archer_Name);
+                tbUserClub.Text = item.Archer_Guild;
             }
             UserSelection.SelectionChanged +=new SelectionChangedEventHandler(UserSelection_SelectionChanged);
 
