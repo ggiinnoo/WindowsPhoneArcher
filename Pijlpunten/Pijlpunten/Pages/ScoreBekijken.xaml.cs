@@ -19,16 +19,13 @@ namespace Pijlpunten.Pages
         public ScoreBekijken()
         {
             InitializeComponent();
-            //lbDate.Items.Add("dd-mm-yyyy");
-            //lbDate.Items.Add("dd-mm-yyyy");
-            //lbDate.Items.Add("dd-mm-yyyy");
-            //lbDate.Items.Add("dd-mm-yyyy");
 
             
             var temp = DBo.GetScoreDate(Pijlpunten.MainPage.ArcherID);
             foreach (Tbl_Score item in temp)
             {
                 lbDate.Items.Add(item.Date.ToString());
+                lbScore.Items.Add(item.Score_Totaal.ToString());
             }
 
         }

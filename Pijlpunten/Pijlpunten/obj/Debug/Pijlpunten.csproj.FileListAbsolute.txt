@@ -120,3 +120,4 @@ C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\De
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.pdb
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\XapCacheFile.xml
+C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.csprojResolveAssemblyReference.cache
