@@ -21,11 +21,11 @@ namespace Pijlpunten
         DatabaseOperations DBo = new DatabaseOperations();
         public string selectedUser;
         public static int ArcherID;
+
         public MainPage()
         {
             InitializeComponent();
 
-            //DBo.GetArcher();
             var temp = DBo.GetArcher();
 
             foreach (Tbl_Archer item in temp)
@@ -53,6 +53,13 @@ namespace Pijlpunten
             MessageBox.Show("Not available in this version");
         }
 
+        //Go to Nieuw screen
+        private void btnCreateArcher_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Pages/CreateArcher.xaml", UriKind.Relative));
+        }
+
+        //When a other user is selected, it gets it information
         private void UserSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedUser = UserSelection.SelectedItem.ToString();
@@ -63,7 +70,6 @@ namespace Pijlpunten
                 ArcherID = item.Archer_Id;
                 tbUserClub.Text = item.Archer_Guild;
             }
-            
         }
     }
 }

@@ -58,15 +58,15 @@ namespace Pijlpunten.Pages
                 TotalScore += ArrowPoint;
                 tbTotaal.Text = TotalScore.ToString();
             }
-            //else
-            //{
-            //    MessageBox.Show("Maximaal aantal pijlen zijn al ingevoerd");
-            //}
+            else if(ArrowCount >= 3)
+            {
+                MessageBox.Show("Maximaal aantal pijlen zijn al ingevoerd");
+            }
 
 
         }
 
-        //Go back to menu
+        //Go back to the menu
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();

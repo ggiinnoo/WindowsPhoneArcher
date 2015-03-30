@@ -43,7 +43,7 @@ namespace Pijlpunten
             return Archer_table;
         }
 
-        
+        //Push score into database
         public void commitScore(int Scoretocommit, int archerid)
         {
 
@@ -54,6 +54,7 @@ namespace Pijlpunten
                 DBCon.SubmitChanges();
         }
 
+        //Get the data for the selected user in the main menu
         public List<Tbl_Archer> SelectedArcher(string selecteduser)
         {
             List<Tbl_Archer> tblArcher = new List<Tbl_Archer>();
@@ -63,6 +64,7 @@ namespace Pijlpunten
             return tblArcher;
         }
 
+        //
         public List<Tbl_Score> GetScoreDate(int archerid)
         {
             List<Tbl_Score> tblScore = new List<Tbl_Score>();
@@ -71,6 +73,17 @@ namespace Pijlpunten
             tblScore = tmp.ToList();
 
             return tblScore;
+        }
+
+        //Create Archer into database
+        public void createArcher(string ArcherName, string Guild)
+        {
+
+            Tbl_Archer addArcher = new Tbl_Archer();
+            addArcher.Archer_Name = ArcherName;
+            addArcher.Archer_Guild = Guild;
+            DBCon.Tbl_Archer.InsertOnSubmit(addArcher);
+            DBCon.SubmitChanges();
         }
     }
 }
