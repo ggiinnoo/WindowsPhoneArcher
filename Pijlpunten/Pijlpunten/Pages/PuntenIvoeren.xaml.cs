@@ -17,7 +17,6 @@ namespace Pijlpunten.Pages
     {
         string currentDate;
         DatabaseOperations DBo = new DatabaseOperations();
-        MainPage Mp = new MainPage();
         public PuntenIvoeren()
         {
             InitializeComponent();
@@ -150,7 +149,7 @@ namespace Pijlpunten.Pages
             if (Count == 0)
             {
                 MessageBox.Show("Score is opgeslagen in de database");
-                DBo.commitScore(Score, Mp.ArcherID);
+                DBo.commitScore(Score, Pijlpunten.MainPage.ArcherID);
             }
 
         }

@@ -20,7 +20,7 @@ namespace Pijlpunten
     {
         DatabaseOperations DBo = new DatabaseOperations();
         public string selectedUser;
-        public int ArcherID;
+        public static int ArcherID;
         public MainPage()
         {
             InitializeComponent();
@@ -33,13 +33,6 @@ namespace Pijlpunten
                 UserSelection.Items.Add(item.Archer_Name);
                 tbUserClub.Text = item.Archer_Guild;
             }
-            UserSelection.SelectionChanged +=new SelectionChangedEventHandler(UserSelection_SelectionChanged);
-
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-           
         }
 
         //Go to Add score view screen
@@ -57,7 +50,7 @@ namespace Pijlpunten
         //The options button
         private void btnOpties_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Not availeble in this version");
+            MessageBox.Show("Not available in this version");
         }
 
         private void UserSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)

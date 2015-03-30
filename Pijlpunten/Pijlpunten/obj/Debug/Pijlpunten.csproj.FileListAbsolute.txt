@@ -112,7 +112,6 @@ C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\De
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
-C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pijlpunten.csprojResolveAssemblyReference.cache
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\App.g.i.cs
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\MainPage.g.i.cs
 C:\Users\Jorrit\Documents\GitHub\WindowsPhoneArcher\Pijlpunten\Pijlpunten\obj\Debug\Pages\PuntenIvoeren.g.i.cs

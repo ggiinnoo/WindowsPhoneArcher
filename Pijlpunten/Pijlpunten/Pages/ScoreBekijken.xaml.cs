@@ -16,7 +16,6 @@ namespace Pijlpunten.Pages
     public partial class ScoreBekijken : PhoneApplicationPage
     {
         DatabaseOperations DBo = new DatabaseOperations();
-        MainPage Mp = new MainPage();
         public ScoreBekijken()
         {
             InitializeComponent();
@@ -25,8 +24,8 @@ namespace Pijlpunten.Pages
             //lbDate.Items.Add("dd-mm-yyyy");
             //lbDate.Items.Add("dd-mm-yyyy");
 
-
-            var temp = DBo.GetScoreDate(Mp.ArcherID);
+            
+            var temp = DBo.GetScoreDate(Pijlpunten.MainPage.ArcherID);
             foreach (Tbl_Score item in temp)
             {
                 lbDate.Items.Add(item.Date.ToString());
