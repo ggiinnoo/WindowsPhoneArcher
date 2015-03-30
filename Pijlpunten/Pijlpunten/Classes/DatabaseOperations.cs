@@ -42,5 +42,25 @@ namespace Pijlpunten
 
             return Archer_table;
         }
+
+        
+        public void commitScore(int Scoretocommit, int archerid)
+        {
+
+                Tbl_Score tblScore = new Tbl_Score();
+                tblScore.Score_Totaal = Scoretocommit;
+                tblScore.Archer_ID = archerid;
+                DBCon.Tbl_Score.InsertOnSubmit(tblScore);
+                DBCon.SubmitChanges();
+        }
+
+        public List<Tbl_Archer> SelectedArcher(string selecteduser)
+        {
+            List<Tbl_Archer> tblArcher = new List<Tbl_Archer>();
+            var tmp = from s in DBCon.Tbl_Archer where s.Archer_Name == selecteduser select s;
+            tblArcher = tmp.ToList();
+
+            return tblArcher;
+        }
     }
 }

@@ -20,8 +20,7 @@ namespace Pijlpunten
     {
         DatabaseOperations DBo = new DatabaseOperations();
         public string selectedUser;
-
-        // Constructor
+        public int ArcherID;
         public MainPage()
         {
             InitializeComponent();
@@ -65,6 +64,13 @@ namespace Pijlpunten
         {
             selectedUser = UserSelection.SelectedItem.ToString();
             tbSelectedUser.Text = selectedUser.ToString();
+            var temp = DBo.SelectedArcher(selectedUser);
+            foreach (Tbl_Archer item in temp)
+            {
+                ArcherID = item.Archer_Id;
+                tbUserClub.Text = item.Archer_Guild;
+            }
+            
         }
     }
 }

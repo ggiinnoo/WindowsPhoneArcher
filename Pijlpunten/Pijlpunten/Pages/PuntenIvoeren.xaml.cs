@@ -16,7 +16,8 @@ namespace Pijlpunten.Pages
     public partial class PuntenIvoeren : PhoneApplicationPage
     {
         string currentDate;
-
+        DatabaseOperations DBo = new DatabaseOperations();
+        MainPage Mp = new MainPage();
         public PuntenIvoeren()
         {
             InitializeComponent();
@@ -134,24 +135,23 @@ namespace Pijlpunten.Pages
 
         private void btnCommit_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (Count >= 0)
             {
-
-
                 MessageBox.Show("Score is ingevoerd");
+                TotalScore += Score;
+                ////reset
+                TotalScore = 0;
+                ArrowCount = 0;
+                tbArrow1.Text = "";
+                tbArrow2.Text = "";
+                tbArrow3.Text = "";
+                Count--;
             }
-
-            catch
+            if (ArrowCount == 0)
             {
-
+                DBo.commitScore(Score, Mp.ArcherID);
             }
 
-
-
-            TotalScore += Score;
-            ////reset
-            TotalScore = 0;
-            ArrowCount = 0;
         }
     }
 }
