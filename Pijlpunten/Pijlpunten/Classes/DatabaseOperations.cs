@@ -62,5 +62,15 @@ namespace Pijlpunten
 
             return tblArcher;
         }
+
+        public List<Tbl_Score> GetScoreDate(int archerid)
+        {
+            List<Tbl_Score> tblScore = new List<Tbl_Score>();
+
+            var tmp = from s in DBCon.Tbl_Score where s.Archer_ID == archerid select s;
+            tblScore = tmp.ToList();
+
+            return tblScore;
+        }
     }
 }

@@ -20,7 +20,6 @@ namespace Pijlpunten
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-
 	
 	
 using System.IO;
@@ -604,6 +603,8 @@ public class DebugWriter : TextWriter
 		
 		private System.Nullable<int> _Score;
 		
+		private string _Date;
+		
 		private EntityRef<Tbl_Archer> _Tbl_Archer;
 		
 		private EntitySet<Tbl_Arrow> _Tbl_Arrow;
@@ -620,6 +621,8 @@ public class DebugWriter : TextWriter
     partial void OnScore_TotaalChanged();
     partial void OnScoreChanging(System.Nullable<int> value);
     partial void OnScoreChanged();
+    partial void OnDateChanging(string value);
+    partial void OnDateChanged();
     #endregion
 		
 		public Tbl_Score()
@@ -709,6 +712,26 @@ public class DebugWriter : TextWriter
 					this._Score = value;
 					this.SendPropertyChanged("Score");
 					this.OnScoreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="NVarChar(25)")]
+		public string Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this.OnDateChanging(value);
+					this.SendPropertyChanging();
+					this._Date = value;
+					this.SendPropertyChanged("Date");
+					this.OnDateChanged();
 				}
 			}
 		}

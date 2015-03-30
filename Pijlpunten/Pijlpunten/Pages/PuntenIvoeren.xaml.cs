@@ -147,8 +147,9 @@ namespace Pijlpunten.Pages
                 tbArrow3.Text = "";
                 Count--;
             }
-            if (ArrowCount == 0)
+            if (Count == 0)
             {
+                MessageBox.Show("Score is opgeslagen in de database");
                 DBo.commitScore(Score, Mp.ArcherID);
             }
 

@@ -15,13 +15,23 @@ namespace Pijlpunten.Pages
 {
     public partial class ScoreBekijken : PhoneApplicationPage
     {
+        DatabaseOperations DBo = new DatabaseOperations();
+        MainPage Mp = new MainPage();
         public ScoreBekijken()
         {
             InitializeComponent();
-            lbDate.Items.Add("dd-mm-yyyy");
-            lbDate.Items.Add("dd-mm-yyyy");
-            lbDate.Items.Add("dd-mm-yyyy");
-            lbDate.Items.Add("dd-mm-yyyy");
+            //lbDate.Items.Add("dd-mm-yyyy");
+            //lbDate.Items.Add("dd-mm-yyyy");
+            //lbDate.Items.Add("dd-mm-yyyy");
+            //lbDate.Items.Add("dd-mm-yyyy");
+
+
+            var temp = DBo.GetScoreDate(Mp.ArcherID);
+            foreach (Tbl_Score item in temp)
+            {
+                lbDate.Items.Add(item.Date.ToString());
+            }
+
         }
 
         //Go back to main menu
