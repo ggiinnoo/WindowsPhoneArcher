@@ -32,7 +32,6 @@
             <TextBlock Height="33" HorizontalAlignment="Left" Margin="145,24,0,0" Name="textBlock1" Text="Nieuwe Gebruiker" VerticalAlignment="Top" Width="180" />
             <TextBox Height="72" HorizontalAlignment="Left" Margin="6,120,0,0" Name="tbArcherName" Text="Naam" VerticalAlignment="Top" Width="444" />
             <TextBox Height="72" HorizontalAlignment="Left" Margin="6,224,0,0" Name="tbArcherGuild" Text="Club" VerticalAlignment="Top" Width="444" />
-            <Button Content="Maak Schutter Aan" Height="72" HorizontalAlignment="Left" Margin="6,0,0,313" Name="button1" VerticalAlignment="Bottom" Width="444" />
         </Grid>
     </Grid>
 </phone:PhoneApplicationPage>

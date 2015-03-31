@@ -32,8 +32,7 @@ namespace Pijlpunten
             List<Tbl_Archer> Archer_table = new List<Tbl_Archer>();
             if (DBCon.CreateIfNotExists() == false)
             {
-                MessageBox.Show("There is no database, it has now been created.");
-                DBCon.CreateIfNotExists();
+                MessageBox.Show("Er zijn scores toegevoegd sinds de laatste sesie.");
             }
             DBCon.LogDebug = true;
 

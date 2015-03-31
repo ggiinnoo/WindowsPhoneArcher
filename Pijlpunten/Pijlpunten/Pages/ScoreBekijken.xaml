@@ -23,7 +23,6 @@
         <!--TitlePanel contains the name of the application and page title-->
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="√" Height="69" HorizontalAlignment="Left" Margin="362,6,0,0" Name="btnCommit" VerticalAlignment="Top" Width="74" />
             <TextBlock Height="33" HorizontalAlignment="Left" Margin="147,30,0,0" Name="textBlock1" Text="Punten Bekijken" VerticalAlignment="Top" Width="180" />
             <Button Content="&lt;" Height="69" HorizontalAlignment="Left" Name="btnBack" VerticalAlignment="Top" Width="74" Margin="6,6,0,0" Click="btnBack_Click" />
         </Grid>
