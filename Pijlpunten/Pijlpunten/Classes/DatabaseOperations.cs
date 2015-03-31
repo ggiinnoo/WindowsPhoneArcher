@@ -44,14 +44,22 @@ namespace Pijlpunten
         }
 
         //Push score into database
-        public void commitScore(int Scoretocommit, int archerid)
+        public void commitScore(int Scoretocommit, int archerid, string currentdate)
         {
+            try
+            {
 
                 Tbl_Score tblScore = new Tbl_Score();
                 tblScore.Score_Totaal = Scoretocommit;
                 tblScore.Archer_ID = archerid;
+                tblScore.Date = currentdate;
                 DBCon.Tbl_Score.InsertOnSubmit(tblScore);
                 DBCon.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         //Get the data for the selected user in the main menu

@@ -26,7 +26,7 @@ namespace Pijlpunten.Pages
             TbDatum.Text = currentDate;
         }
         int Count = 10; //aantal invoeringen
-        int Score = 0;
+        int Score;
         int TotalScore= 0;
         int ArrowCount = 0;
         private void ArrowScore(int ArrowPoint)
@@ -137,7 +137,7 @@ namespace Pijlpunten.Pages
             if (Count >= 0)
             {
                 MessageBox.Show("Score is ingevoerd");
-                TotalScore += Score;
+                Score += TotalScore;
                 ////reset
                 TotalScore = 0;
                 ArrowCount = 0;
@@ -149,7 +149,7 @@ namespace Pijlpunten.Pages
             if (Count == 0)
             {
                 MessageBox.Show("Score is opgeslagen in de database");
-                DBo.commitScore(Score, Pijlpunten.MainPage.ArcherID);
+                DBo.commitScore(Score, Pijlpunten.MainPage.ArcherID, currentDate);
             }
 
         }
