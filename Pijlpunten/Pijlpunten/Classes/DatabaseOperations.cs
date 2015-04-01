@@ -92,14 +92,22 @@ namespace Pijlpunten
 
         }
 
+       
+        public void deleteArcherScore(int archerid)
+        {
+            var tmp = from s in DBCon.Tbl_Score where s.Archer_ID == archerid select s;
+            Tbl_Score delarcherscore = tmp.FirstOrDefault();
+            DBCon.Tbl_Score.DeleteOnSubmit(delarcherscore);
+            DBCon.SubmitChanges();
+        }
         //Delete the archer and his/hers information
-        public void deleteArcher(int archerid, string ArcherName)
+        public void deleteArcher(int archerid)
         {
             var tmp = from s in DBCon.Tbl_Archer where s.Archer_Id == archerid select s;
             Tbl_Archer delArcher = tmp.FirstOrDefault();
-
             DBCon.Tbl_Archer.DeleteOnSubmit(delArcher);
             DBCon.SubmitChanges();
+
         }
     }
 }

@@ -19,21 +19,41 @@ namespace Pijlpunten.Pages
         public ScoreBekijken()
         {
             InitializeComponent();
-
+            LoadScore();
             
+           
+
+        }
+        private void LoadScore()
+        {
             var temp = DBo.GetScoreDate(Pijlpunten.MainPage.ArcherID);
             foreach (Tbl_Score item in temp)
             {
                 lbDate.Items.Add(item.Date.ToString());
                 lbScore.Items.Add(item.Score_Totaal.ToString());
             }
-
         }
 
         //Go back to main menu
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void btDeleteScore_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DBo.deleteArcherScore(Pijlpunten.MainPage.ArcherID);
+                lbDate.Items.Clear();
+                lbScore.Items.Clear();
+                LoadScore();
+            }
+            catch
+            {
+                MessageBox.Show("Alle scores zijn al verwijderd");
+            }
+            
         }
     }
 }

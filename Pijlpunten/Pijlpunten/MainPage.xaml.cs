@@ -91,7 +91,8 @@ namespace Pijlpunten
         //Deletes the current selected archer
         private void btnDeleteArcher_Click(object sender, RoutedEventArgs e)
         {
-            DBo.deleteArcher(ArcherID, selectedUser);
+            //DBo.deleteArcherScore(ArcherID, selectedUser);
+            DBo.deleteArcher(ArcherID);
         }
     }
 }
