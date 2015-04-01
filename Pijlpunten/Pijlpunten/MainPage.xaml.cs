@@ -42,13 +42,27 @@ namespace Pijlpunten
         //Go to Add score view screen
         private void btnPinvoer_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Pages/PuntenIvoeren.xaml", UriKind.Relative));
+            if (selectedUser != null)
+            {
+                NavigationService.Navigate(new Uri("/Pages/PuntenIvoeren.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("voeg een nieuwe gebruiker toe");
+            }
         }
 
         //Go to score view screen
         private void btnScore_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Pages/ScoreBekijken.xaml", UriKind.Relative));
+            if (selectedUser != null)
+            {
+                NavigationService.Navigate(new Uri("/Pages/ScoreBekijken.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("voeg een nieuwe gebruiker toe");
+            }
         }
 
         //The options button
@@ -66,14 +80,18 @@ namespace Pijlpunten
         //When a other user is selected, it gets it information
         private void UserSelection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            selectedUser = UserSelection.SelectedItem.ToString();
-            tbSelectedUser.Text = selectedUser.ToString();
-            var temp = DBo.SelectedArcher(selectedUser);
-            foreach (Tbl_Archer item in temp)
+            try
             {
-                ArcherID = item.Archer_Id;
-                tbUserClub.Text = item.Archer_Guild;
+                selectedUser = UserSelection.SelectedItem.ToString();
+                tbSelectedUser.Text = selectedUser.ToString();
+                var temp = DBo.SelectedArcher(selectedUser);
+                foreach (Tbl_Archer item in temp)
+                {
+                    ArcherID = item.Archer_Id;
+                    tbUserClub.Text = item.Archer_Guild;
+                }
             }
+            catch {}
         }
 
         //Puts all of the archers in the list picker.
@@ -92,7 +110,30 @@ namespace Pijlpunten
         private void btnDeleteArcher_Click(object sender, RoutedEventArgs e)
         {
             //DBo.deleteArcherScore(ArcherID, selectedUser);
-            DBo.deleteArcher(ArcherID);
+            try
+            {
+                
+                DBo.deleteArcher(ArcherID);
+                UserSelection.Items.Clear();
+                selectedUser = null;
+                var temp = DBo.GetArcher();
+
+                foreach (Tbl_Archer item in temp)
+                {
+                    UserSelection.Items.Add(item.Archer_Name);
+                    tbUserClub.Text = item.Archer_Guild;
+                }
+            }
+                
+
+            
+            catch
+            {
+                MessageBox.Show("Verwijder alle score van deze schutter");
+            }
+
+
+
         }
     }
 }
