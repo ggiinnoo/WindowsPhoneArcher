@@ -63,7 +63,20 @@ namespace Pijlpunten.Pages
                 MessageBox.Show("Maximaal aantal pijlen zijn al ingevoerd");
             }
 
+        }
+        private void yesnodialog(int arrow)
+        {
+            MessageBoxResult yesno = MessageBox.Show(arrow.ToString(), "weet je het zeker?", MessageBoxButton.OKCancel);
 
+            if (yesno == MessageBoxResult.OK)
+            {
+                ArrowScore(arrow);
+            }
+
+            else if (yesno == MessageBoxResult.Cancel)
+            {
+
+            }
         }
 
         //Go back to the menu
@@ -72,76 +85,22 @@ namespace Pijlpunten.Pages
             NavigationService.GoBack();
         }
 
-        private void R0_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
 
-            MessageBox.Show("0");
-            ArrowScore(0);
-        }
-
-        private void E1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("1");
-            ArrowScore(1);
-        }
-
-        private void E2_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("2");
-            ArrowScore(2);
-        }
-
-        private void E3_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("3");
-            ArrowScore(3);
-        }
-
-        private void E4_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("4");
-            ArrowScore(4);
-        }
-
-        private void E5_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("5");
-            ArrowScore(5);
-        }
-
-        private void E6_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("6");
-            ArrowScore(6);
-        }
-
-        private void E7_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("7");
-            ArrowScore(7);
-        }
-
-        private void E8_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("8");
-            ArrowScore(8);
-        }
-
-        private void E9_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("9");
-            ArrowScore(9);
-        }
-
-        private void E10_Tap(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            MessageBox.Show("10");
-            ArrowScore(10);
-        }
+        private void R0_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(0);}
+        private void E1_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(1);} 
+        private void E2_Tap(object sender, System.Windows.Input.GestureEventArgs e){ yesnodialog(2);}
+        private void E3_Tap(object sender, System.Windows.Input.GestureEventArgs e){ yesnodialog(3);}
+        private void E4_Tap(object sender, System.Windows.Input.GestureEventArgs e){ yesnodialog(4);}
+        private void E5_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(5);}
+        private void E6_Tap(object sender, System.Windows.Input.GestureEventArgs e){ yesnodialog(6);}
+        private void E7_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(7);}
+        private void E8_Tap(object sender, System.Windows.Input.GestureEventArgs e){ yesnodialog(8);}
+        private void E9_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(9);}
+        private void E10_Tap(object sender, System.Windows.Input.GestureEventArgs e){yesnodialog(10);}
 
         private void btnCommit_Click(object sender, RoutedEventArgs e)
         {
-            if (Count >= 0)
+            if ((Count >= 0) && (tbArrow1.Text != "") && (tbArrow2.Text != "") && (tbArrow3.Text != ""))
             {
                 MessageBox.Show("Score is ingevoerd");
                 TotaalScore += ScoreOpgeteld;
@@ -154,6 +113,10 @@ namespace Pijlpunten.Pages
                 tbArrow2.Text = "";
                 tbArrow3.Text = "";
                 Count--;
+            }
+            else
+            {
+                MessageBox.Show("Voer alle pijlen in");
             }
             if (Count == 0)
             {
