@@ -20,22 +20,24 @@ using System.Linq.Expressions;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
+
 namespace Pijlpunten
 {
     public class DatabaseOperations : PhoneApplicationPage
     {
         DBpijlpuntenContext DBCon = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString);
 
+
+        public void initializeDatabase()
+        {
+            DBCon.CreateIfNotExists();
+            DBCon.LogDebug = true;
+        }
+
         //Get archers from database
         public List<Tbl_Archer> GetArcher()
         {
             List<Tbl_Archer> Archer_table = new List<Tbl_Archer>();
-            if (DBCon.CreateIfNotExists() == false)
-            {
-                MessageBox.Show("Er zijn scores toegevoegd sinds de laatste sesie.");
-            }
-            DBCon.LogDebug = true;
-
             var tmp = from s in DBCon.Tbl_Archer select s;
             Archer_table = tmp.ToList();
 
@@ -45,20 +47,13 @@ namespace Pijlpunten
         //Push score into database
         public void commitScore(int Scoretocommit, int archerid, string currentdate)
         {
-            try
-            {
-
                 Tbl_Score tblScore = new Tbl_Score();
                 tblScore.Score_Totaal = Scoretocommit;
                 tblScore.Archer_ID = archerid;
                 tblScore.Date = currentdate;
                 DBCon.Tbl_Score.InsertOnSubmit(tblScore);
                 DBCon.SubmitChanges();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+
         }
 
         //Get the data for the selected user in the main menu
@@ -91,6 +86,7 @@ namespace Pijlpunten
             addArcher.Archer_Guild = Guild;
             DBCon.Tbl_Archer.InsertOnSubmit(addArcher);
             DBCon.SubmitChanges();
+
         }
     }
 }

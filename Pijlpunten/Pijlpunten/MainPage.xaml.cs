@@ -25,7 +25,7 @@ namespace Pijlpunten
         public MainPage()
         {
             InitializeComponent();
-
+            DBo.initializeDatabase();
             var temp = DBo.GetArcher();
 
             foreach (Tbl_Archer item in temp)
@@ -68,6 +68,17 @@ namespace Pijlpunten
             foreach (Tbl_Archer item in temp)
             {
                 ArcherID = item.Archer_Id;
+                tbUserClub.Text = item.Archer_Guild;
+            }
+        }
+
+        private void UserSelection_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            var temp = DBo.GetArcher();
+
+            foreach (Tbl_Archer item in temp)
+            {
+                UserSelection.Items.Add(item.Archer_Name);
                 tbUserClub.Text = item.Archer_Guild;
             }
         }

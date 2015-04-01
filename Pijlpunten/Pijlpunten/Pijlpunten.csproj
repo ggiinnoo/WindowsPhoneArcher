@@ -121,7 +121,7 @@
     <Resource Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Resource Include="Toolkit.Content\ApplicationBar.Select.png" />
     <EmbeddedResource Include="DBpijlpunten.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Resource Include="Images\blazoen.jpg" />
     <Content Include="README_FIRST.txt" />

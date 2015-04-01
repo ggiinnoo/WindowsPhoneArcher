@@ -38,12 +38,14 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="329,160,0,0" Name="textBlock7" Text="Pijl 3:" VerticalAlignment="Top" />
 
             <!-- Data -->
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,88,0,0" Name="TbScore" Text="" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="389,196,0,0" Name="TbScore" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,124,0,0" Name="TbArrowCount" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,160,0,0" Name="TbDatum" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="374,88,0,0" Name="tb1" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="373,160,0,0" Name="tb2" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="374,124,0,0" Name="tb3" Text="" VerticalAlignment="Top" />
+            <Rectangle Height="458" HorizontalAlignment="Left" Margin="-6,259,0,0" Name="R0" Stroke="Black" StrokeThickness="100" VerticalAlignment="Top" Width="456" Opacity="0" Tap="R0_Tap" />
+
             <Ellipse Height="447" HorizontalAlignment="Left" Margin="0,259,0,0" Name="E1" Stroke="Black" StrokeThickness="28" VerticalAlignment="Top" Width="439" Tap="E1_Tap" Opacity="0" />
             <Ellipse Height="394" HorizontalAlignment="Left" Margin="25,287,0,0" Name="E2" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="389" Opacity="0" Tap="E2_Tap" />
             <Ellipse Height="342" HorizontalAlignment="Left" Margin="52,314,0,0" Name="E3" Stroke="Black" StrokeThickness="25" VerticalAlignment="Top" Width="337" Opacity="0" Tap="E3_Tap" />
@@ -58,7 +60,9 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="385,124,0,0" Name="tbArrow2" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="385,160,0,0" Name="tbArrow3" Text="" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="25,88,0,0" Name="textBlock8" Text="Totaal:" VerticalAlignment="Top" />
-            <TextBlock Height="30" HorizontalAlignment="Left" Margin="179,88,0,0" Name="tbTotaal" Text="" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="389,196,0,0" Name="tbTotaal" Text="" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,196,80,0" Name="textBlock2" Text="Opgeteld:" VerticalAlignment="Top" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="167,88,0,0" Name="tbTotaalScore" Text="" VerticalAlignment="Top" />
         </Grid>
     </Grid>
 

@@ -26,8 +26,8 @@ namespace Pijlpunten.Pages
             TbDatum.Text = currentDate;
         }
         int Count = 10; //aantal invoeringen
-        int Score;
-        int TotalScore= 0;
+        int TotaalScore;
+        int ScoreOpgeteld= 0;
         int ArrowCount = 0;
         private void ArrowScore(int ArrowPoint)
         {
@@ -37,16 +37,16 @@ namespace Pijlpunten.Pages
                 tbArrow1.Text = ArrowPoint.ToString();
                 ArrowCount++;
                 TbArrowCount.Text = ArrowCount.ToString();
-                TotalScore = ArrowPoint;
-                tbTotaal.Text = TotalScore.ToString();
+                ScoreOpgeteld = ArrowPoint;
+                tbTotaal.Text = ScoreOpgeteld.ToString();
             }
             else if (ArrowCount == 1)
             {
                 tbArrow2.Text = ArrowPoint.ToString();
                 ArrowCount++;
                 TbArrowCount.Text = ArrowCount.ToString();
-                TotalScore += ArrowPoint;
-                tbTotaal.Text = TotalScore.ToString();
+                ScoreOpgeteld += ArrowPoint;
+                tbTotaal.Text = ScoreOpgeteld.ToString();
 
             }
             else if (ArrowCount == 2)
@@ -55,8 +55,8 @@ namespace Pijlpunten.Pages
                 ArrowCount++;
                 TbArrowCount.Text = ArrowCount.ToString();
                 tbTotaal.Text += ArrowPoint.ToString();
-                TotalScore += ArrowPoint;
-                tbTotaal.Text = TotalScore.ToString();
+                ScoreOpgeteld += ArrowPoint;
+                tbTotaal.Text = ScoreOpgeteld.ToString();
             }
             else if(ArrowCount >= 3)
             {
@@ -70,6 +70,13 @@ namespace Pijlpunten.Pages
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void R0_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+            MessageBox.Show("0");
+            ArrowScore(0);
         }
 
         private void E1_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -137,9 +144,11 @@ namespace Pijlpunten.Pages
             if (Count >= 0)
             {
                 MessageBox.Show("Score is ingevoerd");
-                Score += TotalScore;
+                TotaalScore += ScoreOpgeteld;
+                tbTotaalScore.Text = TotaalScore.ToString();
                 ////reset
-                TotalScore = 0;
+                tbTotaal.Text = "";
+                ScoreOpgeteld = 0;
                 ArrowCount = 0;
                 tbArrow1.Text = "";
                 tbArrow2.Text = "";
@@ -149,7 +158,8 @@ namespace Pijlpunten.Pages
             if (Count == 0)
             {
                 MessageBox.Show("Score is opgeslagen in de database");
-                DBo.commitScore(Score, Pijlpunten.MainPage.ArcherID, currentDate);
+                DBo.commitScore(TotaalScore, Pijlpunten.MainPage.ArcherID, currentDate);
+                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
             }
 
         }

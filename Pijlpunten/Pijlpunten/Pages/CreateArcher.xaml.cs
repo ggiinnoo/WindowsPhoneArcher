@@ -36,11 +36,11 @@ namespace Pijlpunten.Pages
         private void btnCommit_Click(object sender, RoutedEventArgs e)
         {
             //Put the info into strings
-            tbArcherName.Text = ArcherName;
-            tbArcherGuild.Text = ArcherGuild;
+            ArcherName = tbArcherName.Text;
+            ArcherGuild = tbArcherGuild.Text;
 
             //Check to see if the textboxes are emty, if they are not, the data will will be inserted
-            if (tbArcherName == null && tbArcherGuild == null)
+            if (ArcherName == "Naam" && ArcherGuild == "Club")
             {
                 MessageBox.Show("Vul een goede gebruikersnaam in.");
             }
@@ -49,6 +49,8 @@ namespace Pijlpunten.Pages
                 DBo.createArcher(ArcherName, ArcherGuild);
                 MessageBox.Show("Schutter aangemaakt.");
             }
+
+            NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
     }
 }
