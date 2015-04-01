@@ -19,12 +19,16 @@ namespace Pijlpunten
     public partial class MainPage : PhoneApplicationPage
     {
         DatabaseOperations DBo = new DatabaseOperations();
+
+        //Variables
         public string selectedUser;
         public static int ArcherID;
 
         public MainPage()
         {
             InitializeComponent();
+
+            //If needed it creates the database
             DBo.initializeDatabase();
             var temp = DBo.GetArcher();
 
@@ -72,6 +76,7 @@ namespace Pijlpunten
             }
         }
 
+        //Puts all of the archers in the list picker.
         private void UserSelection_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             var temp = DBo.GetArcher();
@@ -81,6 +86,12 @@ namespace Pijlpunten
                 UserSelection.Items.Add(item.Archer_Name);
                 tbUserClub.Text = item.Archer_Guild;
             }
+        }
+
+        //Deletes the current selected archer
+        private void btnDeleteArcher_Click(object sender, RoutedEventArgs e)
+        {
+            DBo.deleteArcher(ArcherID, selectedUser);
         }
     }
 }

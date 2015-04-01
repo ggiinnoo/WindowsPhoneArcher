@@ -41,6 +41,7 @@
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="117,597,0,0" Name="tbSelectedUser" Text="Kies een schutter" VerticalAlignment="Top" />
             <TextBlock Height="30" HorizontalAlignment="Left" Margin="117,633,0,0" Name="tbUserClub" Text="Kies een schutter" VerticalAlignment="Top" />
             <Button Content="Nieuw" Height="72" HorizontalAlignment="Left" Margin="22,519,0,0" Name="btnCreateArcher" VerticalAlignment="Top" Width="160" Click="btnCreateArcher_Click" />
+            <Button Content="Verwijder Archer" Height="72" HorizontalAlignment="Left" Margin="188,519,0,0" Name="btnDeleteArcher" VerticalAlignment="Top" Width="258" Click="btnDeleteArcher_Click" />
         </Grid>        
     </Grid>
  

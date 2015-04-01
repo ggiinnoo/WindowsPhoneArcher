@@ -25,12 +25,15 @@ namespace Pijlpunten
 {
     public class DatabaseOperations : PhoneApplicationPage
     {
+        //Make the connection to the database.
         DBpijlpuntenContext DBCon = new DBpijlpuntenContext(DBpijlpuntenContext.ConnectionString);
 
 
         public void initializeDatabase()
         {
+            //Create the database if it does not exists yet.
             DBCon.CreateIfNotExists();
+            // For debugging if it crashes
             DBCon.LogDebug = true;
         }
 
@@ -66,7 +69,7 @@ namespace Pijlpunten
             return tblArcher;
         }
 
-        //
+        //Gets the scores for the selected Archer
         public List<Tbl_Score> GetScoreDate(int archerid)
         {
             List<Tbl_Score> tblScore = new List<Tbl_Score>();
@@ -87,6 +90,16 @@ namespace Pijlpunten
             DBCon.Tbl_Archer.InsertOnSubmit(addArcher);
             DBCon.SubmitChanges();
 
+        }
+
+        //Delete the archer and his/hers information
+        public void deleteArcher(int archerid, string ArcherName)
+        {
+            var tmp = from s in DBCon.Tbl_Archer where s.Archer_Id == archerid select s;
+            Tbl_Archer delArcher = tmp.FirstOrDefault();
+
+            DBCon.Tbl_Archer.DeleteOnSubmit(delArcher);
+            DBCon.SubmitChanges();
         }
     }
 }
